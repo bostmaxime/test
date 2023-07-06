@@ -48,6 +48,7 @@ dico['m_T_night']=mean_values.loc['p_mean_T_night']/mean_values.loc['area']
 
 # Création du dashboard
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
+server=app.server
 
 # On définit le layout
 app.layout = html.Div(
