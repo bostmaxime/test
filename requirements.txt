@@ -4,4 +4,4 @@ gunicorn
 geopandas
 rasterio
 plotly
-PIL
+Pillow
