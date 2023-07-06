@@ -203,7 +203,9 @@ app.layout = html.Div(
                             },
                             id="selected_indicator",
                         ),
-                        dcc.Graph(id='radar-graph')
+    
+                    
+                    dcc.Graph(id='radar-graph')
                     ],
                     style={
                         "grid-column": "1",
@@ -370,9 +372,12 @@ def display_city_name(click_data):
         visible=False,
         range=[0, 1]
         )),
-    showlegend=False
+    showlegend=False,
+    margin=dict(t=50, b=50),
+    height = 300,
+    hovermode = False
     )
-    fig.update_layout(title = dict(text = city_name))
+    fig.update_layout(title = dict(text = "Comparaison moyenne française <br>"  + city_name, font = {'size': 15}))
     return fig
 
 if __name__ == "__main__":
