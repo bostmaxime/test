@@ -48,7 +48,6 @@ dico['m_T_night']=mean_values.loc['p_mean_T_night']/mean_values.loc['area']
 
 # Création du dashboard
 app = dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
-server=app.server
 
 # On définit le layout
 app.layout = html.Div(
@@ -137,7 +136,7 @@ app.layout = html.Div(
                             style={
                                 "width": "95%",
                                 "backgroundColor": "white",
-                                "color": "white",
+                                "color": "black",
                                 "margin-left": "5px",
                                 "border-color": "#555555",
                             },
@@ -170,7 +169,7 @@ app.layout = html.Div(
                                 },
                                 {
                                     "label": html.Span(
-                                        ["🏠 Prix loyer/m^2"],
+                                        ["🏠 Prix loyer/m²"],
                                         style={"color": "#555555", "font-size": 15},
                                     ),
                                     "value": "loypredm2",
@@ -310,10 +309,10 @@ def update_map(FUA, indicator, relayout_data):
         hover_data={indicator: True, "CODGEO": False},
         labels={
             "Q219": "Revenus (€)",
-            "TP60IP19": "Indice de pauvreté",
-            "T_day": "Température moy. au sol le jour (°C)",
-            "T_night": "Température moy. au sol la nuit (°C)",
-            "loypredm2": "Prix loyer au m^2 (€)",
+            "TP60IP19": "Indice de <br> pauvreté",
+            "T_day": "Température <br> moy. au sol <br> le jour (°C)",
+            "T_night": "Température <br> moy. au sol <br> la nuit (°C)",
+            "loypredm2": "Prix loyer <br> au m² (€)",
         },
         zoom=zo,
         center={"lat": lat, "lon": long},
@@ -381,4 +380,4 @@ def display_city_name(click_data):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(debug=False)

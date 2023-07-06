@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:ESRI::54009" } },
 "features": [
 { "type": "Feature", "properties": { "fuaname": "Paris" }, "geometry": { "type": "Point", "coordinates": [ 186402.346428335295059, 5747327.962324178777635 ] } },
 { "type": "Feature", "properties": { "fuaname": "Lyon" }, "geometry": { "type": "Point", "coordinates": [ 392582.070474952168297, 5422006.295044786296785 ] } },
